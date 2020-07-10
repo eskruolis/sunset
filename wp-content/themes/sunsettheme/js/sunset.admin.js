@@ -27,4 +27,14 @@ jQuery(document).ready(function($) {
         mediaUploader.open();
     });
 
+     $('#remove-picture').on('click',function(e){
+        e.preventDefault();
+        var answer = confirm("Are you sure?");
+        if( answer == true ){
+            $('#profile-piture').val('');
+            $('.sunset-general-form').submit();
+        } 
+        return;
+     });
+     
 });
